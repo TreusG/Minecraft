@@ -1,0 +1,1 @@
+body { margin: 0; background: #80c9f2; } .game-screen { min-height: 100vh; display: grid; place-items: center; overflow: auto; } .world { display: grid; grid-template-columns: repeat(24, 24px); grid-auto-rows: 24px; } .tile { width: 24px; height: 24px; background: #80c9f2; } .tile-grass { background: #6eaa43; } .tile-dirt { background: #98643e; } .tile-stone { background: #777; }
