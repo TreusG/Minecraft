@@ -3,9 +3,10 @@ const World = {
     init() { this.element = document.getElementById("world"); this.generate(); this.render(); },
     generate() {
         this.map = [];
+        const heights = Array.from({ length: this.columns }, () => 7 + Math.floor(Math.random() * 4));
         for (let row = 0; row < this.rows; row++) {
             const line = [];
-            for (let col = 0; col < this.columns; col++) line.push(row < 9 ? "sky" : row === 9 ? "grass" : "dirt");
+            for (let col = 0; col < this.columns; col++) line.push(row < heights[col] ? "sky" : row === heights[col] ? "grass" : "dirt");
             this.map.push(line);
         }
     },
