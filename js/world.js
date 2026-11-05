@@ -8,7 +8,10 @@ const World = {
             const line = [];
             for (let col = 0; col < this.columns; col++) {
                 const ground = heights[col];
-                line.push(row < ground ? "sky" : row === ground ? "grass" : row <= ground + 3 ? "dirt" : "stone");
+                let tile = row < ground ? "sky" : row === ground ? "grass" : row <= ground + 3 ? "dirt" : "stone";
+                if (row > ground + 5 && Math.random() < 0.035) tile = "coal";
+                if (row > ground + 7 && Math.random() < 0.018) tile = "iron";
+                line.push(tile);
             }
             this.map.push(line);
         }
