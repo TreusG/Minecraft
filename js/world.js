@@ -6,7 +6,10 @@ const World = {
         const heights = Array.from({ length: this.columns }, () => 7 + Math.floor(Math.random() * 4));
         for (let row = 0; row < this.rows; row++) {
             const line = [];
-            for (let col = 0; col < this.columns; col++) line.push(row < heights[col] ? "sky" : row === heights[col] ? "grass" : "dirt");
+            for (let col = 0; col < this.columns; col++) {
+                const ground = heights[col];
+                line.push(row < ground ? "sky" : row === ground ? "grass" : row <= ground + 3 ? "dirt" : "stone");
+            }
             this.map.push(line);
         }
     },
