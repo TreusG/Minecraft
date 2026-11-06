@@ -17,6 +17,13 @@ const World = {
             }
             this.map.push(line);
         }
+        for (let col = 2; col < this.columns - 2; col++) {
+            if (Math.random() > 0.16) continue;
+            const ground = heights[col];
+            for (let row = Math.max(0, ground - 3); row < ground; row++) this.map[row][col] = "oak-log";
+            if (ground - 4 >= 0) this.map[ground - 4][col] = "oak-leaves";
+            if (ground - 3 >= 0) { this.map[ground - 3][col - 1] = "oak-leaves"; this.map[ground - 3][col + 1] = "oak-leaves"; }
+        }
     },
     render() {
         this.element.innerHTML = "";
