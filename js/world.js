@@ -11,6 +11,8 @@ const World = {
                 let tile = row < ground ? "sky" : row === ground ? "grass" : row <= ground + 3 ? "dirt" : "stone";
                 if (row > ground + 5 && Math.random() < 0.035) tile = "coal";
                 if (row > ground + 7 && Math.random() < 0.018) tile = "iron";
+                if (row > ground + 8 && Math.random() < 0.012) tile = "diamond";
+                if (row > ground + 4 && Math.random() < 0.018) tile = "empty";
                 line.push(tile);
             }
             this.map.push(line);
