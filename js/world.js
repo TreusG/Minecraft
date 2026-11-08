@@ -339,8 +339,6 @@ const World = {
 
         const tile = this.getTileElement(row, col);
 
-        if (!tile) return;
-
         tile?.classList.add("tile-breaking");
         tile?.setAttribute("disabled", true);
 
