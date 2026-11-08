@@ -349,7 +349,7 @@ const World = {
 
             this.render();
 
-        }, 140);
+        }, 180);
     },
 
     placeTile(row, col, tileType) 
