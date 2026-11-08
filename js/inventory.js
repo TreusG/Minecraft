@@ -68,7 +68,7 @@ const Inventory = {
     {
         const item = this.itemAliases[tileType] ?? tileType;
 
-        if (this.items[item] <= 0) 
+        if (!Object.hasOwn(this.items, item) || this.items[item] <= 0) 
         {
             return false;
         }

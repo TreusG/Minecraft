@@ -339,6 +339,8 @@ const World = {
 
         const tile = this.getTileElement(row, col);
 
+        if (!tile) return;
+
         tile?.classList.add("tile-breaking");
         tile?.setAttribute("disabled", true);
 
@@ -349,7 +351,7 @@ const World = {
 
             this.render();
 
-        }, 180);
+        }, 140);
     },
 
     placeTile(row, col, tileType) 
