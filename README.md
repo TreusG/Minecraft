@@ -6,8 +6,6 @@ A small browser-based 2D Minecraft-inspired mining and building game. Explore a 
 
 **[Open Minecraft 2D](https://treusg.github.io/Minecraft/)**
 
-> If the link does not work yet, enable GitHub Pages for this repository using the instructions below.
-
 ## Features
 
 - Randomly generated terrain with hills, sandy areas, trees, and underground caves
