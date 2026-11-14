@@ -4,7 +4,7 @@ A simple 2D Minecraft-style game where you can mine blocks, collect resources, a
 
 ## Play
 
-Play Minecraft 2D
+[Play Minecraft 2D](https://treusg.github.io/Minecraft/)
 
 ## Features
 
